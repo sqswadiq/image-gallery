@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid row">
+        <div class="product col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="product-small-img">
+                <img onclick="myFunction(this)" src="./images/img1.jpg">
+                <img onclick="myFunction(this)" src="./images/img2.jpg">
+                <img onclick="myFunction(this)" src="./images/img3.jpg">
+                <img onclick="myFunction(this)" src="./images/img4.jpg">
+                <img onclick="myFunction(this)" src="./images/img5.jpg">
+            </div>
+            <div class="img-container p-2">
+                <img id="imgBox" src="./images/img2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="pro-details col-lg-6 p-5 d-flex align-items-center">
+            <div >
+                <h3>Aldeno Men's Slim Fit T-Shirt (A9C17BLK1_L_Black_L)</h3>
+                <p id="rating"><span>★★★★☆</span>3.9</p>
+                <p><span id="availability">Currently unavailable</span> <br>
+                We don't know when or if this item will be back in stock.</p>
+    
+                <h4>Additional Information</h4>
+                <p><span class="info">Fit type:</span> Slim fit</p>
+                <p><span class="info">Item Weight:</span> 320g</p>
+                <p><span class="info">Net Quantity:</span> 1</p>
+                <p><span class="info">Pocket:</span> yes</p>
+                <p><span class="info">Cloth:</span> cotton</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction(smallImg){
+            var fullImg = document.getElementById("imgBox")
+            fullImg.src=smallImg.src
+        }
+    </script>
+</body>
+
+
+</html>
